@@ -24,12 +24,6 @@ Page({
       urls: ['http://www.umelady.com/uploads/allimg/170711/11355a3Z-0.jpg'] // 需要预览的图片http链接列表
     })
   },
-  //查看更多
-  seemore: function(){
-    wx.redirectTo({
-      url:"../article/article"
-    })
-  },
   //首页跳转
   sy: function(){
     wx.redirectTo({

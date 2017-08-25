@@ -1,0 +1,65 @@
+<!--顶部图片 start-->
+<view class="top_img">
+  <image class="top_icon" src="../../image/icon.png" />
+  <view class="jzkj">建筑空间设计</view>
+  <view class="jzkj2">“每一次设计不忘初心。”</view>
+</view>
+<!--顶部图片 end-->
+
+<view class="bgtpd"></view>
+
+<!--article start-->
+<view class="weui-article art_bp">
+  <view class="weui-article__h1">大标题</view>
+  <view class="weui-article__section">
+    <view class="weui-article__title">章标题</view>
+    <view class="weui-article__section">
+      <view class="weui-article__p">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        <span class="ckgd">[查看更多]</span>
+      </view>
+    </view>
+  </view>
+</view>
+<!--article end-->
+
+<view class="footerb"></view>
+
+<!--底部导航 start-->
+<view class="weui-flex navbar">
+  <view class="weui-flex__item nb_li" hover-class="weui-cell_active" bindtap="sy">
+    <view class="placeholder nb_lid">
+      <view class="nb_icon">
+        <image class="ic" src="../../image/002.png" />
+      </view>
+      <view class="nb_text">首页</view>
+    </view>
+  </view>
+  <view class="weui-flex__item nb_li" hover-class="weui-cell_active" bindtap="tel">
+    <view class="placeholder nb_lid">
+      <view class="nb_icon">
+        <image class="ic" src="../../image//002.png" />
+      </view>
+      <view class="nb_text">电话</view>
+    </view>
+  </view>
+  <view class="weui-flex__item nb_li" hover-class="weui-cell_active">
+    <view class="placeholder nb_lid">
+      <view class="nb_icon">
+        <contact-button class="ic" type="default-dark" size="20" session-from="weapp">
+        </contact-button>
+      </view>
+      <view class="nb_text">客服</view>
+    </view>
+  </view>
+  <view class="weui-flex__item nb_li" hover-class="weui-cell_active" bindtap="dh">
+    <view class="placeholder nb_lid">
+      <view class="nb_icon">
+        <image class="ic" src="../../image/004.jpg" />
+      </view>
+      <view class="nb_text">导航</view>
+    </view>
+  </view>
+</view>
+<!--底部导航 end-->
