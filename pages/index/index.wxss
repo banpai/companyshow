@@ -105,5 +105,5 @@
 }
 .navbar .nb_li .nb_lid .nb_text {
   text-align: center;
-  padding-bottom: 25rpx;
+  padding-bottom: 3px;
 }
