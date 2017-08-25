@@ -17,9 +17,21 @@
       <view class="weui-article__p">
         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
         Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-        <span class="ckgd">[查看更多]</span>
       </view>
     </view>
+  </view>
+  <view class="weui-article__section">
+      <view class="weui-article__h3">1.2 节标题</view>
+      <view class="weui-article__p">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+          cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+          proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </view>
+      <view class="weui-article__p">
+          <image class="weui-article__img" src="../images/pic_article.png" mode="aspectFit" style="height: 180px" />
+          <image class="weui-article__img" src="../images/pic_article.png" mode="aspectFit" style="height: 180px" />
+      </view>
   </view>
 </view>
 <!--article end-->
