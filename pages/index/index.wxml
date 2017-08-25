@@ -1,6 +1,6 @@
 <!--index.wxml-->
 <view class="container">
-  <view  bindtap="bindViewTap" class="userinfo">
+  <view bindtap="bindViewTap" class="userinfo">
     <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
     <text class="userinfo-nickname">{{userInfo.nickName}}</text>
   </view>
@@ -10,18 +10,39 @@
 </view>
 
 <!--底部导航 start-->
-<view class="weui-flex d_naver">
-  <view class="weui-flex__item nav_li">
-    <view class="placeholder">首页</view>
+<view class="weui-flex navbar">
+  <view class="weui-flex__item nb_li" hover-class="weui-cell_active">
+    <view class="placeholder nb_lid">
+      <view class="nb_icon">
+        <image class="ic" src="../../image/002.png" />
+      </view>
+      <view class="nb_text">首页</view>
+    </view>
   </view>
-  <view class="weui-flex__item nav_li">
-    <view class="placeholder">电话</view>
+  <view class="weui-flex__item nb_li" hover-class="weui-cell_active" bindtap="tel">
+    <view class="placeholder nb_lid">
+      <view class="nb_icon">
+        <image class="ic" src="../../image//002.png" />
+      </view>
+      <view class="nb_text">电话</view>
+    </view>
   </view>
-  <view class="weui-flex__item nav_li">
-    <view class="placeholder">客服</view>
+  <view class="weui-flex__item nb_li" hover-class="weui-cell_active">
+    <view class="placeholder nb_lid">
+      <view class="nb_icon">
+        <contact-button class="ic" type="default-dark" size="20" session-from="weapp">
+        </contact-button>
+      </view>
+      <view class="nb_text">客服</view>
+    </view>
   </view>
-  <view class="weui-flex__item nav_li">
-    <view class="placeholder">导航</view>
+  <view class="weui-flex__item nb_li" hover-class="weui-cell_active" bindtap="dh">
+    <view class="placeholder nb_lid">
+      <view class="nb_icon">
+        <image class="ic" src="../../image/004.jpg" />
+      </view>
+      <view class="nb_text">导航</view>
+    </view>
   </view>
 </view>
 <!--底部导航 end-->
