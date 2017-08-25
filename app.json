@@ -1,42 +1,11 @@
 {
   "pages":[
-    "pages/index/index",
-    "pages/logs/logs",
-    "pages/tel/tel",
-    "pages/kf/kf",
-    "pages/dh/dh"
+    "pages/index/index"
   ],
   "window":{
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "WeChat",
     "navigationBarTextStyle":"black"
-  },
-  "tabBar": {
-    "color": "#7A7E83",
-    "selectedColor": "#3cc51f",
-    "borderStyle": "black",
-    "backgroundColor": "#ffffff",
-    "list": [{
-      "pagePath": "pages/index/index",
-      "iconPath": "image/icon_API.png",
-      "selectedIconPath": "image/icon_API_HL.png",
-      "text": "首页"
-    }, {
-      "pagePath": "pages/tel/tel",
-      "iconPath": "image/icon_API.png",
-      "selectedIconPath": "image/icon_API_HL.png",
-      "text": "电话"
-    }, {
-      "pagePath": "pages/kf/kf",
-      "iconPath": "image/icon_API.png",
-      "selectedIconPath": "image/icon_API_HL.png",
-      "text": "客服"
-    }, {
-      "pagePath": "pages/dh/dh",
-      "iconPath": "image/icon_API.png",
-      "selectedIconPath": "image/icon_API_HL.png",
-      "text": "导航"
-    }]
   }
 }

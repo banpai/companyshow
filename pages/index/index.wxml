@@ -8,3 +8,20 @@
     <text class="user-motto">{{motto}}</text>
   </view>
 </view>
+
+<!--底部导航 start-->
+<view class="weui-flex d_naver">
+  <view class="weui-flex__item nav_li">
+    <view class="placeholder">首页</view>
+  </view>
+  <view class="weui-flex__item nav_li">
+    <view class="placeholder">电话</view>
+  </view>
+  <view class="weui-flex__item nav_li">
+    <view class="placeholder">客服</view>
+  </view>
+  <view class="weui-flex__item nav_li">
+    <view class="placeholder">导航</view>
+  </view>
+</view>
+<!--底部导航 end-->
