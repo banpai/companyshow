@@ -11,9 +11,9 @@ var config = {
     // 下面的地址配合云端 Server 工作
     host,
     //主页显示
-    index_api:"http://www.easy-mock.com/mock/59a121428f85d76bb412506b/example/restful/:id/list",
-    //index_api: `${host}ls.wshoto.com/app/index.php?i=1&c=entry&do=index_api&m=siyuan_cms`,
-    news_list_api: `${host}ls.wshoto.com/app/index.php?i=1&c=entry&do=news_list_api&m=siyuan_cms`,
+    //index_api:"http://www.easy-mock.com/mock/59a121428f85d76bb412506b/example/restful/:id/list",
+    index_api: `${host}ls.wshoto.com/app/index.php?i=1&c=entry&do=index_api&m=siyuan_cms`,
+    newslist_api: `${host}ls.wshoto.com/app/index.php?i=1&c=entry&do=newslist_api&m=siyuan_cms`,
     news_detail_api:`${host}ls.wshoto.com/app/index.php?i=1&c=entry&do=news_detail_api&m=siyuan_cms`
 };
 

@@ -1,8 +1,8 @@
 <!--顶部图片 start-->
-<view class="top_img">
-  <image class="top_icon" src="../../image/icon.png" />
-  <view class="jzkj">建筑空间设计</view>
-  <view class="jzkj2">“每一次设计不忘初心。”</view>
+<view class="top_img" style="background: url('{{m.flash}}');background-size:cover;">
+  <image class="top_icon" src="{{m.thumb}}" />
+  <view class="jzkj">{{ m.name }}</view>
+  <view class="jzkj2">“{{ m.logo_des }}。”</view>
 </view>
 <!--顶部图片 end-->
 
@@ -10,31 +10,28 @@
 
 <!--article start-->
 <view class="weui-article art_bp">
-  <view class="weui-article__h1">大标题</view>
+  <view class="weui-article__h1">{{ m.info_name_ch }}</view>
   <view class="weui-article__section">
-    <view class="weui-article__title">章标题</view>
-    <view class="weui-article__section">
+    <view class="weui-article__title" style="color:#ddd;">{{m.info_name_eng}}</view>
+    <view class="weui-article__section" style="margin-top: 15px;">
       <view class="weui-article__p">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        {{m.info1}}
+      </view>
+      <view class="weui-article__p">
+        {{m.info2}}
+      </view>
+      <view class="weui-article__p">
+        {{m.info3}}
+      </view>
+      <view class="weui-article__p">
+        <image class="weui-article__img" wx:for="{{ m.descimgs }}" wx:key="" src="{{item}}" mode="aspectFit" style="height: 180px"
+        />
       </view>
     </view>
   </view>
-  <view class="weui-article__section">
-      <view class="weui-article__h3">1.2 节标题</view>
-      <view class="weui-article__p">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-          cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-          proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-      </view>
-      <view class="weui-article__p">
-          <image class="weui-article__img" src="../images/pic_article.png" mode="aspectFit" style="height: 180px" />
-          <image class="weui-article__img" src="../images/pic_article.png" mode="aspectFit" style="height: 180px" />
-      </view>
-  </view>
 </view>
 <!--article end-->
+
 
 <view class="footerb"></view>
 
@@ -43,7 +40,7 @@
   <view class="weui-flex__item nb_li" hover-class="weui-cell_active" bindtap="sy">
     <view class="placeholder nb_lid">
       <view class="nb_icon">
-        <image class="ic" src="../../image/002.png" />
+        <image class="ic" src="../../image/1.png" />
       </view>
       <view class="nb_text">首页</view>
     </view>
@@ -51,28 +48,26 @@
   <view class="weui-flex__item nb_li" hover-class="weui-cell_active" bindtap="tel">
     <view class="placeholder nb_lid">
       <view class="nb_icon">
-        <image class="ic" src="../../image//002.png" />
+        <image class="ic" src="../../image/3.png" />
       </view>
       <view class="nb_text">电话</view>
     </view>
   </view>
-  <view class="weui-flex__item nb_li" hover-class="weui-cell_active">
-    <view class="placeholder nb_lid">
-      <view class="nb_icon">
-        <contact-button class="ic" type="default-dark" size="20" session-from="weapp">
-        </contact-button>
+  <button open-type="contact" session-from="weapp" class="weui-flex__item nb_li" hover-class="weui-cell_active">
+      <view class="placeholder nb_lid">
+        <view class="nb_icon">
+          <image class="ic" src="../../image/5.png" />
+        </view>
+        <view class="nb_text">客服</view>
       </view>
-      <view class="nb_text">客服</view>
-    </view>
-  </view>
+    </button>
   <view class="weui-flex__item nb_li" hover-class="weui-cell_active" bindtap="dh">
     <view class="placeholder nb_lid">
       <view class="nb_icon">
-        <image class="ic" src="../../image/004.jpg" />
+        <image class="ic" src="../../image/2.png" />
       </view>
       <view class="nb_text">导航</view>
     </view>
   </view>
 </view>
 <!--底部导航 end-->
-

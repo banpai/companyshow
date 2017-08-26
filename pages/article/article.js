@@ -1,57 +1,77 @@
 //index.js
 //获取应用实例
 var app = getApp()
+
+//调用ajax
+const ajax = require('../../utils/util.js').ajax
+
+//订单取消的接口
+const index_api = require('../../config').index_api
+const newslist_api = require('../../config').newslist_api
+
 Page({
   data: {
     motto: 'Hello World',
     userInfo: {}
   },
   onLoad: function () {
-    console.log('onLoad')
-    var that = this
-    
+    var that = this;    
+    //获取数据
+    ajax(index_api, {}, function (m) {
+      that.setData({
+        m: m
+      });
+      console.log(m);
+    });
+    ajax(newslist_api, {}, function (m) {
+      that.setData({
+        pic: m
+      });
+      console.log(JSON.stringify(m));
+    });
   },
   //拨打电话
-  tel: function(){
+  tel: function () {
+    var that = this;
     wx.makePhoneCall({
-      phoneNumber: '1340000'
+      phoneNumber: that.data.m.tel
     });
   },
   //查看图片
-  showimg: function(){
+  showimg: function () {
     wx.previewImage({
       current: 'http://www.umelady.com/uploads/allimg/170711/11355a3Z-0.jpg', // 当前显示图片的http链接
       urls: ['http://www.umelady.com/uploads/allimg/170711/11355a3Z-0.jpg'] // 需要预览的图片http链接列表
     })
   },
+  //查看更多
+  seemore: function () {
+    wx.redirectTo({
+      url: "../article/article"
+    })
+  },
   //首页跳转
-  sy: function(){
+  sy: function () {
     wx.redirectTo({
       url: '../index/index',
-      success: function(res){
+      success: function (res) {
         // success
       },
-      fail: function() {
+      fail: function () {
         // fail
       },
-      complete: function() {
+      complete: function () {
         // complete
       }
     })
   },
   //导航
-  dh: function(){
-    wx.getLocation({
-      type: 'gcj02', //返回可以用于wx.openLocation的经纬度
-      success: function(res) {
-        var latitude = res.latitude
-        var longitude = res.longitude
-        wx.openLocation({
-          latitude: latitude,
-          longitude: longitude,
-          scale: 28
-        })
-      }
+  dh: function () {
+    var that = this;
+    wx.openLocation({
+      latitude: Number(that.data.m.latitude),
+      longitude: Number(that.data.m.longitude),
+      scale: 28
     })
   }
 })

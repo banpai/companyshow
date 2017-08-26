@@ -33,7 +33,9 @@ function ajax (url, data, fun, post) {
     header: header,
     success: function (res) {
       wx.hideLoading();
-      fun(res.data);
+      if(res.data.status == 1){
+        fun(res.data.result);
+      }
     },
     fail: function(){
       console.log('111');

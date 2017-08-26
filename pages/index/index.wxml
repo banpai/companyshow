@@ -2,7 +2,7 @@
 <view class="top_img" style="background: url('{{m.flash}}');background-size:cover;">
   <image class="top_icon" src="{{m.thumb}}" />
   <view class="jzkj">{{ m.name }}</view>
-  <view class="jzkj2">“每一次设计不忘初心。”</view>
+  <view class="jzkj2">“{{ m.logo_des }}。”</view>
 </view>
 <!--顶部图片 end-->
 
@@ -30,12 +30,12 @@
 
 <!--article start-->
 <view class="weui-article art_bp">
-  <view class="weui-article__h1">大标题</view>
+  <view class="weui-article__h1">{{ m.info_name_ch }}</view>
   <view class="weui-article__section">
-    <view class="weui-article__title">章标题</view>
+    <view class="weui-article__title" style="color:{{fuji}};">{{m.info_name_eng}}</view>
     <view class="weui-article__section">
-      <view class="weui-article__p">
-       {{m.body}}
+      <view class="weui-article__p" style="margin-top:12px;">
+        {{m.info1}}
         <span class="ckgd" bindtap="seemore">[查看更多]</span>
       </view>
     </view>
@@ -45,41 +45,13 @@
 <view class="bgtpd"></view>
 <!--产品图片 start-->
 <view class="cptp">
-  <view class="tu">
-      <view class="tb">
-          <view class="ic" bindtap="showimg"></view>
-          <view class="textsj">谜一样的新垣结衣</view>
-      </view>
-  </view>
-  <view class="tu">
-      <view class="tb">
-          <view class="ic" bindtap="showimg"></view>
-          <view class="textsj">谜一样的新垣结衣</view>
-      </view>
-  </view>
-  <view class="tu">
-      <view class="tb">
-          <view class="ic" bindtap="showimg"></view>
-          <view class="textsj">谜一样的新垣结衣</view>
-      </view>
-  </view>
-  <view class="tu">
-      <view class="tb">
-          <view class="ic" bindtap="showimg"></view>
-          <view class="textsj">谜一样的新垣结衣</view>
-      </view>
-  </view>
-  <view class="tu">
-      <view class="tb">
-          <view class="ic" bindtap="showimg"></view>
-          <view class="textsj">谜一样的新垣结衣</view>
-      </view>
-  </view>
-  <view class="tu">
-      <view class="tb">
-          <view class="ic" bindtap="showimg"></view>
-          <view class="textsj">谜一样的新垣结衣</view>
-      </view>
+  <view class="weui-article__h1" style="text-align:center;margin-top:20px;">产品图片</view>
+  <view class="weui-article__title" style="text-align:center;margin-top:0px;font-size: 14px;color:{{fuji}};">Product Picture</view>
+  <view class="tu" wx:for="{{pic}}" wx:key="">
+    <view class="tb">
+      <view class="ic" bindtap="showimg" style="background: url('{{item.thumb}}');background-size: cover;" data-pic="{{item.thumb}}"></view>
+      <view class="textsj">{{ item.title }}</view>
+    </view>
   </view>
 </view>
 <!--产品图片 end-->
