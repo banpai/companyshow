@@ -1,7 +1,7 @@
 <!--顶部图片 start-->
-<view class="top_img">
-  <image class="top_icon" src="../../image/icon.png" />
-  <view class="jzkj">建筑空间设计</view>
+<view class="top_img" style="background: url('{{m.flash}}');background-size:cover;">
+  <image class="top_icon" src="{{m.thumb}}" />
+  <view class="jzkj">{{ m.name }}</view>
   <view class="jzkj2">“每一次设计不忘初心。”</view>
 </view>
 <!--顶部图片 end-->
@@ -13,27 +13,10 @@
       <view class="weui-cells weui-cells_in-small-appmsg">
         <view bindtap="dh" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
           <view class="weui-cell__hd">
-            <image src="{{icon20}}" style="width: 20px;height: 20px;margin-right: 5px" />
+            <image src="../../image/2.png" style="width: 20px;height: 20px;margin-right: 5px" />
           </view>
           <view class="weui-cell__bd weui-cell_primary">
-            <view>北川区王者路99号</view>
-          </view>
-          <view class="weui-cell__ft weui-cell__ft_in-access"></view>
-        </view>
-        <view class="weui-cell weui-cell_access" hover-class="weui-cell_active">
-          <view class="weui-cell__hd">
-            <image src="{{icon20}}" style="width: 20px;height: 20px;margin-right: 5px" />
-          </view>
-          <view class="weui-cell__bd weui-cell_primary">
-            <view>9:00-18:00</view>
-          </view>
-        </view>
-        <view bindtap="tel" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
-          <view class="weui-cell__hd">
-            <image src="{{icon20}}" style="width: 20px;height: 20px;margin-right: 5px" />
-          </view>
-          <view class="weui-cell__bd weui-cell_primary">
-            <view>13151297760</view>
+            <view>{{ m.address }}</view>
           </view>
           <view class="weui-cell__ft weui-cell__ft_in-access"></view>
         </view>
@@ -52,8 +35,7 @@
     <view class="weui-article__title">章标题</view>
     <view class="weui-article__section">
       <view class="weui-article__p">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+       {{m.body}}
         <span class="ckgd" bindtap="seemore">[查看更多]</span>
       </view>
     </view>
@@ -109,7 +91,7 @@
   <view class="weui-flex__item nb_li" hover-class="weui-cell_active" bindtap="sy">
     <view class="placeholder nb_lid">
       <view class="nb_icon">
-        <image class="ic" src="../../image/002.png" />
+        <image class="ic" src="../../image/1.png" />
       </view>
       <view class="nb_text">首页</view>
     </view>
@@ -117,24 +99,23 @@
   <view class="weui-flex__item nb_li" hover-class="weui-cell_active" bindtap="tel">
     <view class="placeholder nb_lid">
       <view class="nb_icon">
-        <image class="ic" src="../../image//002.png" />
+        <image class="ic" src="../../image/3.png" />
       </view>
       <view class="nb_text">电话</view>
     </view>
   </view>
-  <view class="weui-flex__item nb_li" hover-class="weui-cell_active">
+  <button open-type="contact" session-from="weapp" class="weui-flex__item nb_li" hover-class="weui-cell_active">
     <view class="placeholder nb_lid">
       <view class="nb_icon">
-        <contact-button class="ic" type="default-dark" size="20" session-from="weapp">
-        </contact-button>
+        <image class="ic" src="../../image/5.png" />
       </view>
       <view class="nb_text">客服</view>
     </view>
-  </view>
+  </button>
   <view class="weui-flex__item nb_li" hover-class="weui-cell_active" bindtap="dh">
     <view class="placeholder nb_lid">
       <view class="nb_icon">
-        <image class="ic" src="../../image/004.jpg" />
+        <image class="ic" src="../../image/2.png" />
       </view>
       <view class="nb_text">导航</view>
     </view>

@@ -1,12 +1,26 @@
 //index.js
 //获取应用实例
 var app = getApp()
+
+//调用ajax
+const ajax = require('../../utils/util.js').ajax
+
+//订单取消的接口
+const index_api =  require('../../config').index_api
+
 Page({
   data: {
     motto: 'Hello World',
     userInfo: {}
   },
   onLoad: function () {
+    //获取数据
+    ajax(index_api, {}, function(m){
+      that.setData({
+        m: m
+      });
+      console.log(m);
+    });
     console.log('onLoad')
     var that = this
     
@@ -47,17 +61,11 @@ Page({
   },
   //导航
   dh: function(){
-    wx.getLocation({
-      type: 'gcj02', //返回可以用于wx.openLocation的经纬度
-      success: function(res) {
-        var latitude = res.latitude
-        var longitude = res.longitude
-        wx.openLocation({
-          latitude: latitude,
-          longitude: longitude,
-          scale: 28
-        })
-      }
+    var that = this;
+    wx.openLocation({
+      latitude: Number(that.data.m.latitude),
+      longitude: Number(that.data.m.longitude),
+      scale: 28
     })
   }
 })
