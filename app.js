@@ -22,8 +22,9 @@ App({
       })
     }
   },
-
   globalData: {
-    userInfo: null
+    userInfo: null,
+    m: false,
+    pic: false
   }
 })

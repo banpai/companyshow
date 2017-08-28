@@ -16,20 +16,34 @@ Page({
     userInfo: {}
   },
   onLoad: function () {
-    var that = this;    
-    //获取数据
-    ajax(index_api, {}, function (m) {
+    var that = this;
+    console.log(JSON.stringify(app.globalData));
+    if (app.globalData.m) {
       that.setData({
-        m: m
+        m: app.globalData.m
       });
-      console.log(m);
-    });
-    ajax(newslist_api, {}, function (m) {
+    } else {
+      //获取数据
+      ajax(index_api, {}, function (m) {
+        that.setData({
+          m: m
+        });
+        app.globalData.m = m;
+      });
+    }
+    if (app.globalData.pic) {
       that.setData({
-        pic: m
+        pic: app.globalData.pic
       });
-      console.log(JSON.stringify(m));
-    });
+    } else {
+      //获取数据
+      ajax(newslist_api, {}, function (m) {
+        that.setData({
+          pic: m
+        });
+        app.globalData.pic = m;
+      });
+    }
   },
   //拨打电话
   tel: function () {
@@ -55,16 +69,7 @@ Page({
   //首页跳转
   sy: function () {
     wx.redirectTo({
-      url: '../index/index',
-      success: function (res) {
-        // success
-      },
-      fail: function () {
-        // fail
-      },
-      complete: function () {
-        // complete
-      }
+      url: '../index/index'
     })
   },
   //导航

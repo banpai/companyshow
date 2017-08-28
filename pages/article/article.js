@@ -17,18 +17,19 @@ Page({
   onLoad: function () {
     var that = this;    
     //获取数据
-    ajax(index_api, {}, function (m) {
+    if (app.globalData.m) {
       that.setData({
-        m: m
+        m: app.globalData.m
       });
-      console.log(m);
-    });
-    ajax(newslist_api, {}, function (m) {
-      that.setData({
-        pic: m
+    } else {
+      //获取数据
+      ajax(index_api, {}, function (m) {
+        that.setData({
+          m: m
+        });
+        app.globalData.m = m;
       });
-      console.log(JSON.stringify(m));
-    });
+    }
   },
   //拨打电话
   tel: function () {
